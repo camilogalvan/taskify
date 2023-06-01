@@ -1,0 +1,39 @@
+package com.androides.taskifyapp.firstApp
+
+
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.Button
+import com.androides.taskifyapp.R
+
+class HomeActivity : AppCompatActivity() {
+
+    private lateinit var allListsButton: Button
+    private lateinit var featuredButton: Button
+    private lateinit var newListButton: Button
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_home)
+
+        allListsButton = findViewById(R.id.all_lists_button)
+        featuredButton = findViewById(R.id.featured_button)
+        newListButton = findViewById(R.id.new_list_button)
+
+        allListsButton.setOnClickListener {
+            // Acciones para el botón "Todas las listas"
+        }
+
+        featuredButton.setOnClickListener {
+            // Acciones para el botón "Destacados"
+        }
+
+        newListButton.setOnClickListener {
+            // Acciones para el botón "+ Nueva Lista"
+
+            val intent = Intent(this, CreateNewListActivity::class.java)
+            startActivity(intent)
+        }
+    }
+}

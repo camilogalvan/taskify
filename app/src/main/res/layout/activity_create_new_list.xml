@@ -1,0 +1,152 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Encabezado -->
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Botón de regresar -->
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:layout_gravity="start" />
+
+        <!-- Espacio vacío para separar los botones -->
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <!-- Botón de selección/deselección -->
+        <ToggleButton
+            android:id="@+id/fixed_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="No fija"
+            android:textOn="Fija"
+            android:layout_gravity="end"
+            android:paddingStart="16dp"        />
+
+    </LinearLayout>
+
+
+    <!-- Centro -->
+    <LinearLayout
+        android:id="@+id/center_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_layout"
+        android:layout_below="@id/header_layout"
+        android:orientation="vertical">
+        >
+
+        <!-- Título -->
+        <EditText
+            android:id="@+id/title_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese el título" />
+
+        <!-- Input para agregar tareas -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Botón de agregar tarea -->
+            <ImageButton
+                android:id="@+id/add_task_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_add" />
+
+            <!-- Input para la tarea -->
+            <EditText
+                android:id="@+id/task_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Agregue una nueva tarea" />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <!-- Fondo -->
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        >
+        <!-- Etiqueta -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selecciona una etiqueta"
+            android:gravity="center" />
+
+        <!-- Botones de etiqueta -->
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/personal_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Personal"
+                android:button="@null"
+                android:background="@drawable/selector_button_1"
+                android:gravity="center" />
+
+            <RadioButton
+                android:id="@+id/work_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Trabajo"
+                android:button="@null"
+                android:background="@drawable/selector_button_2"
+                android:gravity="center" />
+
+            <RadioButton
+                android:id="@+id/shopping_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Compras"
+                android:button="@null"
+                android:background="@drawable/selector_button_3"
+                android:gravity="center" />
+
+            <RadioButton
+                android:id="@+id/other_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Otro"
+                android:button="@null"
+                android:background="@drawable/selector_button_4"
+                android:gravity="center" />
+
+        </RadioGroup>
+        <!-- Aquí puedes agregar otros elementos en el fondo si es necesario -->
+
+    </LinearLayout>
+
+</RelativeLayout>
