@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Encabezado -->
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="horizontal">
+
+        <!-- Botón de regresar -->
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            />
+
+        <!-- Espacio vacío para separar los botones -->
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <!-- Botón de selección/deselección -->
+        <ToggleButton
+            android:id="@+id/fixed_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="No fija"
+            android:textOn="Fija"
+            android:paddingStart="16dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            />
+
+    </LinearLayout>
+
+
+    <!-- Centro -->
+    <LinearLayout
+        android:id="@+id/center_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_layout"
+        android:layout_below="@id/header_layout"
+        android:orientation="vertical">
+
+        <!-- Título -->
+        <EditText
+            android:id="@+id/title_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Lista diaría"
+            android:padding="16dp"
+            android:textSize="18sp" />
+
+        <!-- Input para agregar tareas -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="16dp" />
+
+    </LinearLayout>
+
+    <!-- Fondo -->
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+    </LinearLayout>
+
+</RelativeLayout>
