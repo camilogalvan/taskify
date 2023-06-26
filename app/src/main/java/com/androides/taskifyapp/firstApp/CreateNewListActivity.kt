@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.androides.taskifyapp.R
 
 class CreateNewListActivity : AppCompatActivity() {
-
     private lateinit var backButton: ImageButton
     private lateinit var fixedToggle: ToggleButton
     private lateinit var titleEditText: EditText
